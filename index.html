@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="Images/social-media-logo.png" alt="Zakir Ali Logo" class="logo-img">
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Open navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="btn">
+                <input type="button" value="Contact" onclick="window.location='#contact'">
+            </div>
+        </nav>
+    </header>
+    <script>
+    // Mobile menu toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('open');
+        navToggle.classList.toggle('open');
+    });
+    // Close menu on link click (mobile)
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+            navToggle.classList.remove('open');
+        });
+    });
+    </script>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div class="hero-content">
+                <h1 class="hero-title animate-fadein">Grow Your Brand with Proven Social Media Marketing</h1>
+                <p class="hero-sub animate-fadein">I help businesses boost engagement and sales through data-driven social media strategies tailored to your goals.</p>
+                <div class="hero-cta animate-fadein">
+                    <button class="btn-lg" onclick="window.location='#portfolio'">See My Work</button>
+                    <button class="btn-lg" onclick="window.location='#contact'">Contact Me</button>
+                </div>
+            </div>
+            <div class="hero-divider">
+                <svg viewBox="0 0 1440 100" width="100%" height="100" preserveAspectRatio="none"><path d="M0,0 C480,100 960,0 1440,100 L1440,100 L0,100 Z" fill="#fff"/></svg>
+            </div>
+        </section>
+        <!-- About Me Section -->
+        <section class="about-section" id="about">
+            <div class="about-card">
+                <div class="about-img-wrap">
+                    <img src="images/my-photo.jfif" alt="Zakir Ali Photo" class="about-img">
+                </div>
+                <div class="about-info">
+                    <h2>Zakir Ali</h2>
+                    <p>Hi, I’m Zakir Ali—a passionate social media marketer with 5+ years of experience helping brands stand out online. I specialize in creating campaigns that drive real results, from increased followers to higher sales. My approach combines creativity, analytics, and a deep understanding of each platform’s unique strengths.</p>
+                    <ul class="skills-list">
+                        <li>Social Media Strategy</li>
+                        <li>Facebook & Instagram Ads</li>
+                        <li>Content Creation</li>
+                        <li>Analytics & Reporting</li>
+                        <li>Community Management</li>
+                    </ul>
+                    <div class="about-cta">
+                        <button class="btn btn-1">Download Resume</button>
+                        <button class="btn btn-2">Hire Me</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio Section -->
+        <section class="portfolio-section" id="portfolio">
+            <h1 class="section-title">Portfolio</h1>
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <img src="images/Social Media.jfif" alt="Zack Company Campaign" class="portfolio-img">
+                    <div class="portfolio-info">
+                        <h2>Social Media Marketing for Zack Company</h2>
+                        <div class="portfolio-tags"><span class="tag">Brand Awareness</span> <span class="tag">Strategy</span></div>
+                        <p>Developed and executed a multi-platform campaign that increased brand awareness by 40% in 3 months.<br><strong>Role/Results:</strong> Led content strategy, managed ad spend, and grew followers by 5,000+.</p>
+                    </div>
+                </div>
+                <div class="portfolio-card">
+                    <img src="images/Get like on your social media.jfif" alt="Xeven Company Ads" class="portfolio-img">
+                    <div class="portfolio-info">
+                        <h2>Ads Management for Xeven Company</h2>
+                        <div class="portfolio-tags"><span class="tag">Ads</span> <span class="tag">Optimization</span></div>
+                        <p>Managed Facebook and Instagram ads, resulting in a 25% increase in conversions and a 15% reduction in cost-per-click.<br><strong>Role/Results:</strong> Optimized targeting, creative, and budget allocation.</p>
+                    </div>
+                </div>
+                <div class="portfolio-card">
+                    <img src="images/Facebook-Ads-Management.jfif" alt="AdsMint Facebook Marketing" class="portfolio-img">
+                    <div class="portfolio-info">
+                        <h2>Facebook Marketing for AdsMint</h2>
+                        <div class="portfolio-tags"><span class="tag">Engagement</span> <span class="tag">Leads</span></div>
+                        <p>Launched a viral campaign that doubled engagement rates and generated 200+ qualified leads.<br><strong>Role/Results:</strong> Designed creative assets, managed community, and analyzed performance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services Section -->
+        <section class="services-section" id="services">
+            <h1 class="section-title">Services</h1>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><img src="images/facebook.jfif" alt="Facebook Ads"></div>
+                    <h2>Facebook Ads Marketing</h2>
+                    <p>Reach your ideal audience and maximize ROI with expertly managed Facebook ad campaigns.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="images/youtube.jfif" alt="YouTube Ads"></div>
+                    <h2>YouTube Ads Marketing</h2>
+                    <p>Grow your brand’s presence with engaging video ads on YouTube.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="images/twitter.jfif" alt="Twitter Ads"></div>
+                    <h2>Twitter Ads Marketing</h2>
+                    <p>Spark conversations and drive traffic with targeted Twitter advertising.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="images/instagrame.jfif" alt="Instagram Ads"></div>
+                    <h2>Instagram Ads Marketing</h2>
+                    <p>Build your brand visually and connect with new customers on Instagram.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="images/social-media-logo.png" alt="Social Media Strategy"></div>
+                    <h2>Social Media Strategy</h2>
+                    <p>Develop a winning strategy tailored to your brand and audience for maximum impact.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="images/logo3.png" alt="Content Creation"></div>
+                    <h2>Content Creation</h2>
+                    <p>Create engaging, high-quality content that resonates with your target audience.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Experience/Testimonials Section -->
+        <section class="experience-section" id="experience">
+            <h1 class="section-title">Experience</h1>
+            <p class="experience-summary">Over 5+ years, I’ve partnered with leading brands and startups to deliver measurable results in social media marketing, advertising, and content strategy. Here are some of the companies and clients I’ve worked with, along with their feedback.</p>
+            <div class="companies-grid">
+                <div class="company-card">
+                    <img src="images/logo.png" alt="Zack Company Logo">
+                    <h3>Zack Company</h3>
+                    <p class="company-role">Social Media Strategist<br><span class="company-years">2021–2023</span></p>
+                    <ul class="company-highlights">
+                        <li>Increased brand awareness by 40%</li>
+                        <li>Grew followers by 5,000+</li>
+                    </ul>
+                </div>
+                <div class="company-card">
+                    <img src="images/logo2.png" alt="Xeven Company Logo">
+                    <h3>Xeven Company</h3>
+                    <p class="company-role">Ads Manager<br><span class="company-years">2020–2021</span></p>
+                    <ul class="company-highlights">
+                        <li>25% increase in conversions</li>
+                        <li>15% reduction in cost-per-click</li>
+                    </ul>
+                </div>
+                <div class="company-card">
+                    <img src="images/logo3.png" alt="AdsMint Logo">
+                    <h3>AdsMint</h3>
+                    <p class="company-role">Facebook Marketing Lead<br><span class="company-years">2019–2020</span></p>
+                    <ul class="company-highlights">
+                        <li>Doubled engagement rates</li>
+                        <li>Generated 200+ qualified leads</li>
+                    </ul>
+                </div>
+                <div class="company-card">
+                    <img src="images/logo4.png" alt="Other Company Logo">
+                    <h3>Brandify</h3>
+                    <p class="company-role">Content Creator<br><span class="company-years">2018–2019</span></p>
+                    <ul class="company-highlights">
+                        <li>Launched viral campaigns</li>
+                        <li>Boosted community engagement</li>
+                    </ul>
+                </div>
+                <div class="company-card">
+                    <img src="images/social-media-logo.png" alt="SocialPro Logo">
+                    <h3>SocialPro</h3>
+                    <p class="company-role">Digital Consultant<br><span class="company-years">2017–2018</span></p>
+                    <ul class="company-highlights">
+                        <li>Developed influencer partnerships</li>
+                        <li>Improved analytics reporting</li>
+                    </ul>
+                </div>
+                <div class="company-card">
+                    <img src="images/logo4.png" alt="Other Company Logo">
+                    <h3>Brandify</h3>
+                    <p class="company-role">Content Creator<br><span class="company-years">2018–2019</span></p>
+                    <ul class="company-highlights">
+                        <li>Launched viral campaigns</li>
+                        <li>Boosted community engagement</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">Z</div>
+                    <blockquote>“Zakir’s campaigns helped us reach new customers and grow our business faster than we imagined.”<br><span>— Client at Zack Company</span></blockquote>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">A</div>
+                    <blockquote>“The Facebook campaigns doubled our engagement and brought in high-quality leads.”<br><span>— CEO, AdsMint</span></blockquote>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">B</div>
+                    <blockquote>“Great content and strategy! Our brand’s online presence has never been stronger.”<br><span>— Community Manager, Brandify</span></blockquote>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">S</div>
+                    <blockquote>“Zakir’s insights into influencer marketing and analytics were game-changing for us.”<br><span>— Director, SocialPro</span></blockquote>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <h1 class="section-title">Contact</h1>
+            <div class="contact-card">
+                <div class="contact-info">
+                    <h2>Drop a Message</h2>
+                    <p class="pera">Ready to grow your brand? Let’s connect! Fill out the form or reach me on social media.</p>
+                    <div class="contact-rows">
+                        <div class="row"><a href="https://wa.me/92985782933" target="_blank"><img src="images/WhatsApp.png" alt="WhatsApp"></a><p>+92 985782933</p></div>
+                        <div class="row"><a href="https://twitter.com/yourprofile" target="_blank"><img src="images/Twitter.png" alt="Twitter"></a><p>@zakirali</p></div>
+                        <div class="row"><a href="https://m.me/yourprofile" target="_blank"><img src="images/Messenger.png" alt="Messenger"></a><p>Zakir Ali</p></div>
+                        <div class="row"><img src="images/Locaction.png" alt="Location"><p>Pishin Stop, Quetta</p></div>
+                    </div>
+                </div>
+                <div class="contact-form-wrap">
+                    <form class="contact-form">
+                        <div class="input-group"><input type="text" placeholder="Name" required></div>
+                        <div class="input-group"><input type="email" placeholder="Email" required></div>
+                        <div class="input-group"><textarea name="message" id="message" cols="30" rows="5" placeholder="Message" required></textarea></div>
+                        <button class="btn-lg" type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="footer-divider">
+        <svg viewBox="0 0 1440 100" width="100%" height="100" preserveAspectRatio="none"><path d="M0,0 C480,100 960,0 1440,100 L1440,100 L0,100 Z" fill="#03032e"/></svg>
+    </div>
+    <footer class="main-footer">
+        <p>© 2024 Zakir Ali. All rights reserved. | <a href="#home">Home</a> | <a href="#about">About</a> | <a href="#portfolio">Portfolio</a> | <a href="#services">Services</a> | <a href="#contact">Contact</a></p>
+    </footer>
+</body>
+</html>
